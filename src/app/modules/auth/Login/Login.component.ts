@@ -5,6 +5,7 @@ import { ApiService } from 'src/app/core/services/api.service';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import swal from'sweetalert2';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -17,7 +18,10 @@ export class LoginComponent implements OnInit {
   changetype:boolean =true;
   user!:UserForm;
 
-  constructor(private apiService:ApiService,private router: Router) { }
+  constructor(
+    private apiService:ApiService,
+    private router: Router,
+    private authService:AuthService){ }
 
 
   loginForm=new FormGroup({
@@ -38,7 +42,11 @@ export class LoginComponent implements OnInit {
       password:passwordUser
     }
     this.apiService.verifyUser(this.user).subscribe({
-      next:()=>{},
+      next:(res:number)=>{
+        sessionStorage.clear();
+        sessionStorage.setItem("user",res.toString());
+        this.authService.logged.next(true);
+      },
       error:(error:HttpErrorResponse)=>{
         let code:number=error.status;
         if(code===401){

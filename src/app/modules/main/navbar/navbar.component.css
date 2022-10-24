@@ -1,0 +1,28 @@
+.spacer {
+  flex: 1;
+}
+.spacer2 {
+  flex: 0.02;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secundary);
+  color: white;
+  font-weight: var(--fw-bold);
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+.a-logout{
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  text-decoration: none;
+}

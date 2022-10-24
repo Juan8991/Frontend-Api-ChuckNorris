@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { JokeFromBackend } from 'src/app/core/models/joke.model';
+import { JokeFromBackend, JokeToBackend } from 'src/app/core/models/joke.model';
 import { ApiService } from 'src/app/core/services/api.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import swal from'sweetalert2';
@@ -10,21 +10,24 @@ import swal from'sweetalert2';
   styleUrls: ['./get-jokes.component.css']
 })
 export class GetJokesComponent implements OnInit {
-  joke!:JokeFromBackend;
+  joke!:JokeToBackend;
   constructor(private apiService:ApiService) { }
 
   ngOnInit() {
   }
 
   getJoke(){
+    const storage=sessionStorage.getItem('user');
+    const userId=Number(storage);
     this.apiService.generateJoke().subscribe({
       next:(res: any)=>{
         console.log(res);
         this.joke={
-          icon_url:res.icon_url,
+          iconUrl:res.icon_url,
           id:res.id,
           url:res.url,
-          value:res.value
+          value:res.value,
+          userId:userId
         };
         console.log("joke:",this.joke)
       },

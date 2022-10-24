@@ -7,7 +7,8 @@ export const environment = {
   backend:{
     checkCredentials:'http://localhost:8181/auth',
     generatejoke:'http://localhost:8181/jokes/random',
-    saveJoke:'http://localhost:8181/jokes/add'
+    saveJoke:'http://localhost:8181/jokes/add',
+    getMyjokes:'http://localhost:8181/auth/id'
   }
 };
 

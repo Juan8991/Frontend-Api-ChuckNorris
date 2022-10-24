@@ -1,3 +1,18 @@
-<p>
-  navbar works!
-</p>
+<div class="toolbar" role="banner">
+  <div class="spacer2"></div>
+  <ng-container  >
+    <a class="a-logout"   routerLink="/jokes" >Obtener Chiste</a>
+  </ng-container>
+  <div class="spacer2"></div>
+  <ng-container  >
+    <a class="a-logout"   routerLink="/myjokes" >Mis Chistes</a>
+  </ng-container>
+
+    <div class="spacer"></div>
+    <ng-container  >
+      <a class="a-logout"   href="" (click)="logOut()">Cerrar sesion</a>
+    </ng-container>
+    <div class="spacer2"></div>
+
+
+</div>

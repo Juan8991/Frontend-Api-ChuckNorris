@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { IsLoggedInGuard } from 'src/app/core/guards/is-logged-in.guard';
 import { GetJokesComponent } from './get-jokes/get-jokes.component';
 import { MyJokesComponent } from './my-jokes/my-jokes.component';
 
@@ -11,11 +12,13 @@ const routes: Routes = [
   },
   {
     path: 'jokes',
-    component:GetJokesComponent
+    component:GetJokesComponent,
+    canActivate: [IsLoggedInGuard]
   },
   {
     path: 'myjokes',
-    component:MyJokesComponent
+    component:MyJokesComponent,
+    canActivate: [IsLoggedInGuard]
   }
 ];
 

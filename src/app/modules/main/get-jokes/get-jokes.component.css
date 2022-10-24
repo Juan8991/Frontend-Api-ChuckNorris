@@ -16,6 +16,9 @@ img{
   font-family: var(--body-font);
   border: 1px var(--color-primary);
 }
+.btn:hover{
+  background-color: var(--color-secundary);
+}
 .joke-container{
   margin-top: 30px;
 

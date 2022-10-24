@@ -1,3 +1,20 @@
-<p>
-  my-jokes works!
-</p>
+<div class="main-container text-center">
+  <div class="">
+
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Chiste</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let joke of jokesList; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{joke.value}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

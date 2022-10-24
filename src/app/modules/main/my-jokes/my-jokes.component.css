@@ -1,0 +1,12 @@
+.main-container{
+  margin-top: 120px;
+
+}
+.table{
+  margin-left: 25%;
+  position: relative;
+  width: 60%;
+}
+td{
+  columns: black;
+}
