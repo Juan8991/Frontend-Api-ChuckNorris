@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+/*==================== GOOGLE FONTS ====================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*==================== REINICIAR VALORES HTML ====================*/
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+html{
+  font-size:62.5%;
+}
+/*==================== VARIABLES CSS ====================*/
+:root {
+  --color-primary:#f15b24;
+  --color-secundary:#2dabe2;
+  /*==========  Typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --ff-primary: " Open sas", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+  --ff-intro:sans-serif;
+  /*========== Font-size ==========*/
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --fw-reg: 300;
+  --fw-semi: 700;
+  --fw-bold: 900;
+}
+/*==================== CONFIGURACION DE ELEMENTOS ESTANDAR ====================*/
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+

@@ -1,0 +1,33 @@
+.main-container{
+  margin: 20px 20px;
+}
+.icon-container{
+  margin-top: 90px;
+}
+img{
+  width: 300px;
+}
+.btn{
+  margin-top: 30px;
+  width: 90px;
+  background-color: var(--color-primary);
+  font-size: var(--h2-font-size);
+  font-weight: var(--fw-semi);
+  font-family: var(--body-font);
+  border: 1px var(--color-primary);
+}
+.joke-container{
+  margin-top: 30px;
+
+}
+h1{
+  font-weight: var(--fw-bold);
+  font-family: var(--body-font);
+}
+span{
+  background-color: var(--color-secundary);
+  font-size: var(--h2-font-size);
+  font-weight: var(--fw-semi);
+  font-family: var(--body-font);
+  border: 1px solid var(--color-primary);
+}

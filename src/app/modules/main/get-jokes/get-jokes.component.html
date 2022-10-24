@@ -1,0 +1,17 @@
+
+<div class="main-container text-center">
+  <div class="icon-container">
+    <img src="/assets/images/chucknorris_logo.png" alt="chuck-icon">
+  </div>
+  <div class="buton-generator">
+    <button (click)="getJoke()" class="btn btn-primary">Obtener un chiste</button>
+  </div>
+  <div class="joke-container">
+    <h1>Joke!</h1>
+    <span class="joke-body">{{this.joke.value}}</span><br>
+    <ng-container *ngIf="this.joke.value">
+      <button  (click)="addFavorite()" class="btn btn-primary">Guardar como favorito!</button>
+    </ng-container>
+
+  </div>
+</div>
