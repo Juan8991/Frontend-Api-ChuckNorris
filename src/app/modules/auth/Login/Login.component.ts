@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   visible:boolean = true;
   changetype:boolean =true;
   user!:UserForm;
+ 
 
   constructor(
     private apiService:ApiService,
@@ -24,16 +25,18 @@ export class LoginComponent implements OnInit {
     private authService:AuthService){ }
 
 
-  loginForm=new FormGroup({
-    email: new FormControl('', { validators: [Validators.required,Validators.email]}),
-    password: new FormControl('', { validators: [Validators.required]})
-  })
+    loginForm=new FormGroup({
+      email: new FormControl('', { validators: [Validators.required,Validators.email]}),
+      password: new FormControl('', { validators: [Validators.required]})
+    })
   ngOnInit() {
+
   }
   changeVisibility(){
     this.visible = !this.visible;
     this.changetype = !this.changetype;
   }
+
   submitUser(){
     const emailUser = this.loginForm.get('email')?.value;
     const passwordUser = this.loginForm.get('password')?.value;
